@@ -1,6 +1,5 @@
 version: '3'
 services:
-
   ################################################
   ## Local Sites Setup:                         ##
   ## Nginx, Elastic Search, Redis               ##
@@ -44,6 +43,7 @@ services:
     restart: always
     environment:
       - POSTGRES_PASSWORD=example
+      - POSTGRES_DB=clay
     volumes:
       - ./postgres/data:/var/lib/postgresql/data
     ports:
